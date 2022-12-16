@@ -2,11 +2,15 @@
     display: flex;
     flex-direction: column ;
     height: 100%;
-    background-color: #e1e3ed;
+    background: url("../assets/anstract.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .top-section {
-    background-color: aquamarine;
+    // background-color: aquamarine;
     text-align: center;
     padding: 60px 0;
 
@@ -25,10 +29,15 @@
 }
 
 .content-section {
-    background-color: blue;
+    // background-color: blue;
     flex-grow: 1;
 }
 
-.buttom-section {
-    background-color: cornflowerblue;
+.bottom-section {
+    // background-color: cornflowerblue;
+    display: flex;
+
+    app-tabs {
+        margin: auto;
+    }
 }
