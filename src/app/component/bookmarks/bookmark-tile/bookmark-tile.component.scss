@@ -1,0 +1,48 @@
+.bookmark-tile {
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    width: 110px;
+    height: 105px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 5px;
+    flex-direction: column;
+    cursor: pointer;
+
+    gap: 12px;
+
+    transform: all 0.5s;
+
+    &:hover {
+        background-color: rgba($color: #000000, $alpha: 0.55);
+        // to blur the background use 
+        backdrop-filter: blur(2px);
+    }
+
+    // working on the click state
+    &:active {
+        background-color: rgba($color: #000000, $alpha: 0.75);
+        transform: translateY(2px);
+        transition-duration: 0s;
+    }
+}
+
+.bookmark-tile img {
+    max-width: 30px;
+}
+
+.tile-text {
+    color: rgba($color: white, $alpha: 0.85);
+    font-size: 14px;
+
+    // truncating the text of the bootkmark tile
+
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    padding: 12px;
+}
+

@@ -1,0 +1,13 @@
+.bookmarks-wrapper {
+    height: 100%;
+}
+
+.bookmark-tiles-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+
+    // handles the overflow of bookmarks
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
