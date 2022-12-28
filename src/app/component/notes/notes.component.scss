@@ -22,8 +22,10 @@
 .note-card-title {
     font-size: 20px;
     font-weight: 600;
+    gap: 3px;
 }
 
-.note-card-content {
-    margin-top: 7px;
+.add-btn i {
+    margin-right: 5px;
+    margin-left: -3px;
 }

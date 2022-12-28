@@ -7,6 +7,7 @@
 
 html {
     font-family: 'Inter', sans-serif;
+    color: #222;
 }
 
 html, body {
@@ -19,10 +20,98 @@ h1 {
 
 h2 {
     font-size: 40px;
+    margin-bottom: 25px;
 }
 
 // its a global style for all containers
 .container {
     max-width: 850px;
     margin: auto;
+}
+
+// default styling for all buttons
+.btn {
+    font-family: inherit;
+    padding: 12px 22px;
+    background-color: rgba($color: #000000, $alpha: 0.7);
+    display: inline-flex;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 4px;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+
+    &.align-end {
+        margin-left: auto;
+    }
+
+    &:hover {
+        background-color: rgba($color: #000000, $alpha: 0.78);
+        backdrop-filter: blur(2px);
+    }
+
+    &:active {
+        background-color: rgba($color: #000000, $alpha: 0.85);
+    }
+}
+
+.btns-container {
+    display: flex;
+    margin-top: 20px;
+    
+
+    &.btns-centered {
+        justify-content: center;
+    }
+
+
+}
+
+.has-blurred-white-bg {
+    background-color: rgba($color: #fff, $alpha: 0.85);
+    backdrop-filter: blur(20px);
+}
+
+// default styling for the h1 and h2 tags
+h1.is-bold,
+h2.is-bold {
+    font-weight: bold;
+    letter-spacing: -2px;
+}
+
+
+// default stylings for the inputs
+.text-box,
+.text-area {
+    display: block;
+    font-size: 18px;
+    font-family: inherit;
+    width: 100%;
+    padding: 8px 10px;
+    background-color: rgba($color: #fff, $alpha: 0.9);
+    border: solid 2px rgba($color: #000000, $alpha: 0.3);
+    border-radius: 4px;
+    margin-bottom: 20px;
+
+    &:hover {
+        background-color: rgba($color: #fff, $alpha: 0.95);
+    }
+
+    &:focus {
+        background: #fff;
+        outline: none;
+    }
+
+    &:hover, &:focus {
+        border-color: rgba($color: #000000, $alpha: 0.42);
+    }
+}
+
+
+.text-area {
+    resize: vertical;
+    min-height: 100px;
 }
