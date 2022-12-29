@@ -11,6 +11,7 @@ import { NotesComponent } from './component/notes/notes.component';
 import { BookmarkTileComponent } from './component/bookmarks/bookmark-tile/bookmark-tile.component';
 import { AddNoteComponent } from './component/notes/add-note/add-note.component';
 import { NoteCardComponent } from './component/notes/note-card/note-card.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { NoteCardComponent } from './component/notes/note-card/note-card.compone
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
