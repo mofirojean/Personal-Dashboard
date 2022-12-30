@@ -12,6 +12,7 @@ import { BookmarkTileComponent } from './component/bookmarks/bookmark-tile/bookm
 import { AddNoteComponent } from './component/notes/add-note/add-note.component';
 import { NoteCardComponent } from './component/notes/note-card/note-card.component';
 import { FormsModule } from '@angular/forms';
+import { EditNoteComponent } from './component/notes/edit-note/edit-note.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FormsModule } from '@angular/forms';
     NotesComponent,
     BookmarkTileComponent,
     AddNoteComponent,
-    NoteCardComponent
+    NoteCardComponent,
+    EditNoteComponent
   ],
   imports: [
     BrowserModule,
