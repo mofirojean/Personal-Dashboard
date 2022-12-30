@@ -7,10 +7,8 @@ import { Note } from './note.model';
 export class NoteService {
 
   notes: Note[] = [
-    new Note("Test title", "Test content"),
-    new Note("Test 2", "Test content 2")
+    new Note("wonderful", "This is a content")
   ]
-
   constructor() { }
 
   getNotes() {
@@ -18,7 +16,7 @@ export class NoteService {
   }
 
   getNote(id: string){
-    return this.getNotes().find(n => n.id === id) // returns the note object
+    return this.notes.find(n => n.id === id) // returns the note object
   }
 
   addNote(note: Note) {
