@@ -33,4 +33,11 @@ export class EditNoteComponent implements OnInit {
     }
     
   }
+
+  deleteNote() {
+    if (typeof this.note?.id == 'string') {
+      this.noteService.deleteNote(this.note.id)
+      this.router.navigateByUrl('/notes')
+    }
+  }
 }

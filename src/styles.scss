@@ -61,6 +61,7 @@ h2 {
 .btns-container {
     display: flex;
     margin-top: 20px;
+    gap: 12px;
     
 
     &.btns-centered {
@@ -116,4 +117,8 @@ h2.is-bold {
 .text-area {
     resize: vertical;
     min-height: 100px;
+}
+
+a {
+    text-decoration: none;
 }
