@@ -5,7 +5,6 @@
     border-radius: 25px;
     position: relative;
 
-    margin-bottom: 15px;
     padding: 10px 12px;
     gap: 12px;
 
@@ -86,6 +85,10 @@
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
         padding-left: 14px;
+
+        &:hover {
+            background-color: #2a2ae0;
+        }
      }
 
      &:last-child{
