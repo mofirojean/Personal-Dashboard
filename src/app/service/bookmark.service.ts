@@ -6,7 +6,9 @@ import { Bookmark } from '../model/bookmark.model';
 })
 export class BookmarkService {
 
-  bookmarks?: Bookmark[]
+  bookmarks?: Bookmark[] = [
+    new Bookmark("Wikipedia", "http://wikipedia.org")
+  ]
 
   constructor() { }
 
@@ -32,6 +34,8 @@ export class BookmarkService {
   deleteBookmark(id: string) {
     const bookmarkIndex = this.bookmarks?.findIndex(b => b.id === id)
     if (bookmarkIndex == -1) return
-    this.bookmarks?.splice(bookmarkIndex, 1)
+    if (typeof bookmarkIndex == "number" ) {
+      this.bookmarks?.splice(bookmarkIndex, 1)
+    }
   }
 }
