@@ -9,10 +9,12 @@ import { Bookmark } from 'src/app/model/bookmark.model';
 export class BookmarkTileComponent implements OnInit {
 
   @Input() bookmark?: Bookmark
+  tileIconSource?: string
 
   constructor() { }
 
   ngOnInit(): void {
+    this.tileIconSource = this.bookmark?.url.origin + '/favicon.ico'
   }
 
 }

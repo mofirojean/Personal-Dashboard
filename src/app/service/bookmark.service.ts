@@ -7,7 +7,9 @@ import { Bookmark } from '../model/bookmark.model';
 export class BookmarkService {
 
   bookmarks?: Bookmark[] = [
-    new Bookmark("Wikipedia", "http://wikipedia.org")
+    new Bookmark("Wikipedia", "https://wikipedia.org"),
+    new Bookmark("Google", "https://google.com"),
+    new Bookmark("YouTube", "https://youtube.com"),
   ]
 
   constructor() { }
