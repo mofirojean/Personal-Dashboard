@@ -9,11 +9,13 @@ import { AddTodoComponent } from './component/todos/add-todo/add-todo.component'
 import { EditTodoComponent } from './component/todos/edit-todo/edit-todo.component';
 import { AddBookmarkComponent } from './component/bookmarks/add-bookmark/add-bookmark.component';
 import { ManageBookmarksComponent } from './component/bookmarks/manage-bookmarks/manage-bookmarks.component';
+import { EditBookmarkComponent } from './component/bookmarks/manage-bookmarks/edit-bookmark/edit-bookmark.component';
 
 const routes: Routes = [
   {path: "bookmarks", component: BookmarksComponent, data: {tab: 1}},
   {path: "bookmarks/add", component: AddBookmarkComponent},
   {path: "bookmarks/manage", component: ManageBookmarksComponent},
+  {path: "bookmarks/manage/:id", component: EditBookmarkComponent},
   {path: "todos", component: TodosComponent, data: {tab: 2}},
   {path: "todos/add", component: AddTodoComponent},
   {path: "todos/:id", component: EditTodoComponent},
