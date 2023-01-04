@@ -27,9 +27,9 @@ export class BookmarkService {
   }
 
   updateBookmark(id: string, updatedField: Partial<Bookmark>) {
-    const bookmarkId = this.getBookmark(id)
-    if (typeof bookmarkId == "string"){
-      Object.assign(bookmarkId, updatedField)
+    const bookmarkIndex = this.getBookmark(id)
+    if (typeof bookmarkIndex == 'object') {
+      Object.assign(bookmarkIndex, updatedField)
     }
   }
 
