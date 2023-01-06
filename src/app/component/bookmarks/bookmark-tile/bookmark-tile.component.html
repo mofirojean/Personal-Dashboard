@@ -1,6 +1,9 @@
-<div class="bookmark-tile">
-    <div class="tile-icon">
-        <img [src]="tileIconSource" alt="">
+<div class="bookmark-tile" *ngIf="bookmark">
+    <div class="tile-icon" *ngIf="!faviconError">
+        <img [src]="tileIconSource" alt="" (error)="faviconError=true">
     </div>
-    <p class="tile-text">{{bookmark?.name}}</p>
+    <div class="tile-icon fallback-text" *ngIf="faviconError">
+        {{bookmark.name[0] | uppercase}}
+    </div>
+    <p class="tile-text">{{bookmark.name}}</p>
 </div>
