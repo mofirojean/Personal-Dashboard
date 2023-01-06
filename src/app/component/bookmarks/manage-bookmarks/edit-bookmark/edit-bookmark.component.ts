@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { Bookmark } from 'src/app/model/bookmark.model';
 import { BookmarkService } from 'src/app/service/bookmark.service';
 
@@ -13,7 +13,10 @@ export class EditBookmarkComponent implements OnInit {
 
   bookmark?: Bookmark
 
-  constructor(private bookmarkService: BookmarkService, private route: ActivatedRoute) { }
+  constructor(
+    private bookmarkService: BookmarkService, 
+    private route: ActivatedRoute, 
+    private router: Router) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((paraMap: ParamMap) => {
@@ -27,6 +30,13 @@ export class EditBookmarkComponent implements OnInit {
   onFormSubmit(form: NgForm) {
     if (typeof this.bookmark?.id == 'string') {
       this.bookmarkService.updateBookmark(this.bookmark?.id, form.value)
+    }
+  }
+
+  delete() {
+    if (typeof this.bookmark?.id == 'string') {
+     this.bookmarkService.deleteBookmark(this.bookmark?.id)
+     this.router.navigate(['../'], {relativeTo: this.route})
     }
   }
 
