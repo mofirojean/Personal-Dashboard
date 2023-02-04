@@ -17,7 +17,7 @@ export class AddBookmarkComponent implements OnInit {
   }
 
   onFormSubmit(form: NgForm) {
-    const {name, url} = form.value
+    const {name, url} = form.value // distructuring
     const bookmark = new Bookmark(name, url)
     this.bookmarkSevice.addBookmark(bookmark)
     this.router.navigateByUrl('/bookmarks')
