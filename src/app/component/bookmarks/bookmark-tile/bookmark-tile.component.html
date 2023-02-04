@@ -3,7 +3,7 @@
         <img [src]="tileIconSource" alt="" (error)="faviconError=true">
     </div>
     <div class="tile-icon fallback-text" *ngIf="faviconError">
-        {{bookmark.name[0] | uppercase}}
+        {{bookmark.name[0].toUpperCase()}}
     </div>
     <p class="tile-text">{{bookmark.name}}</p>
 </div>
