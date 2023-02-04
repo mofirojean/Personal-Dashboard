@@ -25,6 +25,5 @@ export class AddNoteComponent implements OnInit {
     const note = new Note(form.value.title, form.value.content)
     this.noteService.addNote(note)
     this.router.navigateByUrl("/notes")
-    console.log(note)
   }
 }
