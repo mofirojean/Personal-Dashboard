@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
+import { NoticationData } from '../model/notification-data.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class NoticationService {
 
-  private notication$: Subject<string> = new Subject()
+  private notication$: Subject<NoticationData> = new Subject()
 
   constructor() { }
 
@@ -15,8 +16,8 @@ export class NoticationService {
   }
 
   // It will show the text to all subscribers of this notification
-  show(text: string) {
-    this.notication$.next(text)
+  show(text: string, duration = 4000) {
+    this.notication$.next({text, duration})
   }
 
 }
