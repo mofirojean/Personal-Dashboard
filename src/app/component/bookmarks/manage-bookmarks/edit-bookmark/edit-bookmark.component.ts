@@ -36,14 +36,15 @@ export class EditBookmarkComponent implements OnInit {
         name, 
         url: new URL(url)
       })
+      this.notificationService.show("Bookmark Updated!")
     }
-    this.notificationService.show("Bookmark Updated Succefully!")
   }
 
   delete() {
     if (typeof this.bookmark?.id == 'string') {
      this.bookmarkService.deleteBookmark(this.bookmark?.id)
      this.router.navigate(['../'], {relativeTo: this.route})
+     this.notificationService.show("Deleted Bookmark!")
     }
   }
 
