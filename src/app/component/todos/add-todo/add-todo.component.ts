@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Todo } from 'src/app/model/todo.model';
+import { NoticationService } from 'src/app/service/notication.service';
 import { TodoService } from 'src/app/service/todo.service';
 
 @Component({
@@ -13,7 +14,11 @@ export class AddTodoComponent implements OnInit {
 
   showValidationErrors!: boolean
 
-  constructor(private todoService: TodoService, private router: Router) { }
+  constructor(
+    private todoService: TodoService, 
+    private router: Router,
+    private notificationService: NoticationService
+    ) { }
 
   ngOnInit(): void {
   }
@@ -23,6 +28,7 @@ export class AddTodoComponent implements OnInit {
     const todo = new Todo(form.value.text)
     this.todoService.addTodo(todo)
     this.router.navigateByUrl("/todos")
+    this.notificationService.show("Created Todo!")
   }
 
 }
